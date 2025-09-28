@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  shiny-app:
+    build: .
+    ports:
+      - "3838:3838"
+    volumes:
+      - ./final_ispr_men_table.csv:/srv/shiny-server/final_ispr_men_table.csv
+      - ./variable_abbreviations.csv:/srv/shiny-server/variable_abbreviations.csv
+    restart: unless-stopped
+    environment:
+      - APPLICATION_LOGS_TO_STDOUT=true
