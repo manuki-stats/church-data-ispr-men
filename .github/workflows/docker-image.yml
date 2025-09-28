@@ -10,7 +10,7 @@ name: Build & Push Docker Image
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: church-data-ispr-men/CDIM_docker
+  IMAGE_NAME: church-data-ispr-men/cdim_docker
 
 jobs:
   build-docker:
